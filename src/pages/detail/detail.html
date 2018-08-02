@@ -1,0 +1,48 @@
+<ion-header class="nav">
+
+  <ion-navbar>
+    <ion-title>
+      Movie details
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngIf="movie" class="hey">
+
+  <div class="wrapper">
+    <div class="image">
+      <img src="{{movie.medium_cover_image}}">
+
+      <button class="downlaod-button" ion-button (click)="constructLink($event)" block
+        color="danger">Download 720</button>
+      <button class="downlaod-button" (click)="constructLink($event)" *ngIf=" movie.torrents.length> 1"
+        ion-button block color="danger">Download 1080</button>
+      <button class="downlaod-button" (click)="suggestedMovies()" ion-button block color="dark">
+        similar movies</button>
+    </div>
+    <div class="details">
+      <h2 class="movie-title">{{movie.title}}</h2>
+      <p>
+        <ion-icon ios="logo-yahoo" color="danger" md="logo-yahoo"></ion-icon> : {{movie.year}}</p>
+
+      <p>
+        <ion-icon color="danger" ios="ios-videocam" md="md-videocam"></ion-icon> : {{movie.genres[0]}}/{{movie.genres[1]}}
+      </p>
+      <p>
+        <ion-icon color="danger" ios="ios-star" md="md-star"></ion-icon> : {{movie.rating}}/10
+      </p>
+      <p>
+        <ion-icon color="danger" ios="ios-heart" md="md-heart"></ion-icon> : {{movie.like_count}}
+      </p>
+
+      <p>
+        <ion-icon color="danger" ios="ios-stopwatch" md="md-stopwatch"></ion-icon> : {{movie.runtime}} mins</p>
+    </div>
+
+  </div>
+  <div *ngIf="movie" class="summary">
+    <hr>
+    <h2>Summary: </h2>
+    <p>{{movie.description_full}}</p>
+  </div>
+</ion-content>

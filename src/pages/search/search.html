@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Search movie
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="test($event)" spellcheck="true" placeholder="type at least one word"
+    debounce="2000"></ion-searchbar>
+
+
+  <ion-list *ngIf="result">
+    <div class="movie" *ngFor="let m of result">
+      <h2>{{m.title}}</h2>
+      <p id="rating">IMDb: {{m.rating}}
+        <ion-icon class="my-icon" ios="ios-star" md="md-star"></ion-icon>
+        <span>/10</span>
+      </p>
+      <img src="{{m.medium_cover_image}}">
+      <button class="go-button" name="button" (click)="navigateToMovie(m.id)" ion-button
+        color="dark">Go &nbsp;
+        <ion-icon ios="ios-navigate" md="md-navigate"></ion-icon>
+      </button>
+    </div>
+  </ion-list>
+</ion-content>

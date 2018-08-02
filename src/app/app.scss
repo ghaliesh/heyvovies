@@ -1,0 +1,56 @@
+// http://ionicframework.com/docs/theming/
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@font-face {
+  font-family: robo;
+  src: url('../assets/fonts/roboto1.woff2');
+}
+
+* {
+  font-family: robo;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+h2 {
+  color: rgba(0, 0, 0, 0.84);
+  font-feature-settings: "liga";
+  font-size: 20px !important;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -0.516667px;
+  line-height: 35.3667px;
+  overflow-wrap: break-word;
+  text-rendering: optimizelegibility;
+  visibility: visible;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.0666667px;
+  line-height: 28.4333px;
+}
+
+.warn>div {
+  background-color: #f53d3d !important;
+  width: 100%;
+}
+
+.success>div {
+  background-color: #32db64 !important;
+  width: 100%;
+}
