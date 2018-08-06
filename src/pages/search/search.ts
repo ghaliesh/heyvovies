@@ -47,7 +47,7 @@ export class SearchPage {
         spinner.dismiss();
         if (res.data.movies === undefined) {
           this.alert.presentAlert(
-            'did not found your request',
+            'Did not found your request',
             'bottom',
             'warn'
           );

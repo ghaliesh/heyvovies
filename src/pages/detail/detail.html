@@ -7,19 +7,19 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content *ngIf="movie" class="hey">
+<ion-content *ngIf="movie" class="page">
 
   <div class="wrapper">
     <div class="image">
       <img src="{{movie.medium_cover_image}}">
 
-      <button class="downlaod-button" ion-button (click)="constructLink($event)" block
-        color="danger">Download 720</button>
+      <button class="downlaod-button" ion-button (click)="constructLink($event)" color="danger">Download 720</button>
       <button class="downlaod-button" (click)="constructLink($event)" *ngIf=" movie.torrents.length> 1"
-        ion-button block color="danger">Download 1080</button>
-      <button class="downlaod-button" (click)="suggestedMovies()" ion-button block color="dark">
+        ion-button color="danger">Download 1080</button>
+      <button class="downlaod-button" (click)="suggestedMovies()" ion-button color="dark">
         similar movies</button>
     </div>
+
     <div class="details">
       <h2 class="movie-title">{{movie.title}}</h2>
       <p>
@@ -40,6 +40,10 @@
     </div>
 
   </div>
+
+
+
+
   <div *ngIf="movie" class="summary">
     <hr>
     <h2>Summary: </h2>
