@@ -7,15 +7,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { Clipboard } from '@ionic-native/clipboard';
-import { TabsPage } from '../pages/tabs/tabs';
 import { EngineProvider } from '../providers/engine/engine';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
 import { AlertProvider } from '../providers/alert/alert';
 import { AppErrorHandler } from '../errors/app-error-handler';
 import { SuggestedPageModule } from '../pages/suggested/suggested.module';
 import { HomePageModule } from '../pages/home/home.module';
 import { DetailPageModule } from '../pages/detail/detail.module';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [MyApp, TabsPage],
